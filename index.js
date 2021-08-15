@@ -30,3 +30,38 @@ document.addEventListener("keydown", function(e) {
       moveDodgerRight();
     }
   });
+
+  function moveDodgerUp() {
+    const verticalNumbers = dodger.style.bottom.replace("px", "");
+    const vertical = parseInt(verticalNumbers, 10);
+    if (vertical < 380){
+      dodger.style.bottom = `${vertical + 1}px`
+    }
+    
+  }
+
+ 
+
+  document.addEventListener("keydown", function(q) {
+    if (q.key === "ArrowUp") {
+      moveDodgerUp();
+    }
+  });
+
+  function moveDodgerDown() {
+    const verticalNumbers = dodger.style.bottom.replace("px", "");
+    const vertical = parseInt(verticalNumbers, 10);
+    if (vertical > 0){
+       dodger.style.bottom = `${vertical - 1}px`
+    }
+  }
+
+ 
+
+  document.addEventListener("keydown", function(r) {
+    if (r.key === "ArrowDown") {
+      moveDodgerDown();
+    }
+  });
+
+
